@@ -5,6 +5,7 @@
 }
 
 .title{
+    height:100px;
     color:black;
     width:350px;/*默认高度是父类高度*/
     font:normal 32px/ 80px 微软雅黑; /* 黑体 ， 字体大小，行高 上下居中*/
@@ -14,18 +15,22 @@
 
 
 .menu_list {
-    width:800px;
+    text-align: center;
+    width:1000px;
     float:left;
 
 }
 .menu_list ul{
-    margin:0;
+    display: inline-block;
+    list-style-type: none;
+    margin:13px;
+    padding:0;
     }
 
 .menu_list li{
     height:100px;
-    width: 150px;
+    width: 180px;
     font:normal 18px/ 60px 微软雅黑;
     float:left;
-    text-align:center;
+    display: inline;
 }
