@@ -1,6 +1,10 @@
+body{
+    background:#E0E0E0;
+}
+
 .top_menu{
     height:100px;
-    background: rgba(176,196,222,0.5);
+    background: rgba(255,255,255,0.5);
     /*background:blue*/
 }
 
@@ -12,25 +16,47 @@
     text-align:center;
     float:left;
 }
-
-
+/* 整体列表上浮*/
 .menu_list {
     text-align: center;
-    width:1000px;
-    float:left;
-
-}
-.menu_list ul{
-    display: inline-block;
-    list-style-type: none;
-    margin:13px;
-    padding:0;
-    }
-
-.menu_list li{
+    width:800px;
     height:100px;
-    width: 180px;
-    font:normal 18px/ 60px 微软雅黑;
     float:left;
-    display: inline;
+
 }
+/* 整体列表样式*/
+.menu_list ul{
+    margin:13px 0px 0px 0px;
+    list-style: none;  /*设置列表的显示样式，去掉原点标记*/
+    height:100px;
+    padding:0;    /*上下左右距离*/
+    }
+/*列表内容样式*/
+.menu_list li{
+    color:black;
+    height:80px;
+    width: 130px;
+    font:normal 18px/ 60px 微软雅黑;
+    text-align:center;
+    float:left;
+}
+/*鼠标滑过变色*/
+.menu_list li:hover{
+    background:#E8E8E8
+}
+
+.top_user {
+    width:100px;
+    height:100px;
+    float:right;
+    text-align:center;
+    margin:13px;
+}
+.top_user a{
+    color:black;
+    width:130px;
+    height:60px;
+    font:normal 18px/ 60px 微软雅黑;
+    }
+/*去除a标签下划线*/
+.top_user a:link {text-decoration:none;}
