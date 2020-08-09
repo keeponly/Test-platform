@@ -1,50 +1,54 @@
+/*设置整个页面的背景样式*/
 body{
-    background:#E0E0E0;
+    background:white;
 }
 
 .top_menu{
     height:100px;
-    background: rgba(255,255,255,0.5);
+    background: #7e8c8d;
     /*background:blue*/
 }
 
 .title{
+    background:darkcyan;
     height:100px;
     color:black;
-    width:350px;/*默认高度是父类高度*/
+    width:300px;/*默认高度是父类高度*/
     font:normal 32px/ 80px 微软雅黑; /* 黑体 ， 字体大小，行高 上下居中*/
     text-align:center;
     float:left;
 }
 /* 整体列表上浮*/
 .menu_list {
+    margin-left: 10px;
     text-align: center;
-    width:800px;
+    width:1000px;
     height:100px;
     float:left;
 
 }
 /* 整体列表样式*/
 .menu_list ul{
-    margin:13px 0px 0px 0px;
+    margin:13px 0 0 0;
     list-style: none;  /*设置列表的显示样式，去掉原点标记*/
     height:100px;
     padding:0;    /*上下左右距离*/
     }
 /*列表内容样式*/
 .menu_list li{
+    border-radius: 15px;
     color:black;
     height:80px;
-    width: 130px;
+    width: 18%;
     font:normal 18px/ 60px 微软雅黑;
     text-align:center;
     float:left;
 }
 /*鼠标滑过变色*/
 .menu_list li:hover{
-    background:#E8E8E8
+    color: blue;
 }
-
+/*退出登录*/
 .top_user {
     width:100px;
     height:100px;
@@ -54,9 +58,74 @@ body{
 }
 .top_user a{
     color:black;
-    width:130px;
-    height:60px;
     font:normal 18px/ 60px 微软雅黑;
     }
 /*去除a标签下划线*/
 .top_user a:link {text-decoration:none;}
+/*内容*/
+.main_content{
+    width:80%;
+    height: 800px;
+    position: absolute;
+    left: 320px;
+    top: 100px;
+}
+/*侧边栏 总长，总宽*/
+.left_menu{
+    background: #7e8c8d;
+    position: absolute;
+    text-align:center;
+    top: 100px;
+    left: 0;
+    width: 300px;
+    height: 1188px;
+    font: normal 22px/100px 微软雅黑;
+}
+.left_meun_list{
+    height: 65px;
+    line-height: 65px
+}
+.left_meun_list a{
+    color: black ;
+    font: normal 15px/15px 微软雅黑
+}
+.pro_info{
+    width: 300px;
+    height: 230px;
+    border: solid 1px rgba(58, 147, 153, 0.47);
+    margin-top: 35px;
+    margin-left: 60px;
+    float: left;
+    border-radius: 15px;
+}
+.pro_title{
+    background: azure;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font: normal 20px/50px "Microsoft YaHei UI";
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+.pro_info p{
+    font: normal 20px/50px "Microsoft YaHei UI";
+    text-align: center;
+}
+/*删除按钮*/
+.pro_info a {
+
+    background: azure;
+    font: normal 20px/50px "Microsoft YaHei UI";
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.add_pro{
+    width: 500px ;
+    height: 500px;
+    background: aliceblue;
+    float: left;
+    position:relative;
+    margin-left: 600px;
+    margin-top: 50px;
+}
