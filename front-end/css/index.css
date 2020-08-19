@@ -89,6 +89,7 @@ body{
     color: black ;
     font: normal 15px/15px 微软雅黑
 }
+/*项目信息页面显示窗口*/
 .pro_info{
     width: 300px;
     height: 230px;
@@ -120,12 +121,12 @@ body{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+/*增加项目窗口*/
 .add_pro{
-    width: 500px ;
-    height: 500px;
+    position: fixed;
+    left: 36%;
+    top: 150px;
+    width: 550px;
+    height: 400px;
     background: aliceblue;
-    float: left;
-    position:relative;
-    margin-left: 600px;
-    margin-top: 50px;
 }
