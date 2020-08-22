@@ -4,6 +4,7 @@
     <title>Test-platform</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript" src="js/test.js"></script>
 </head>
 <body>
 <div class="top_menu">
@@ -101,22 +102,30 @@
     </div>
 
 </div>
+<!--增加项目窗口-->
 <div class="add_pro" >
+    <div class="alert_title"> 新增项目</div>
     <form action="" >
-        <div class="alert_title">
+        <div class="alert_input">
             <label for="pro_name">项目名称：</label>
             <input type="text" name="title" id="pro_name">
-        </div><div class="alert_title">
+        </div>
+        <div class="alert_input">
             <label for="pro_address">测试地址：</label>
             <input type="text" name="title" id="pro_address">
-        </div><div class="alert_title">
+        </div>
+        <div class="alert_input">
             <label for="pro_personnel">测试人员：</label>
             <input type="text" name="title" id="pro_personnel">
-        </div><div class="alert_title">
+        </div>
+        <div class="pro_desc">
             <label for="describe">项目描述：</label>
-            <input type="text" name="title" id="describe">
-        </div><div class="pro_tj">
-            <input type="submit" value="Submit" id="pro_tj">
+            <textarea cols="25" rows="5"  id="describe" style="margin-left:18px"></textarea>
+        </div>
+        <div class="pro_tj">
+            <input type="submit" value="提交" style="font-size:25px; back;background: aliceblue;" id="pro_tj">
+            <input type="button" value="取消" style="font-size:25px;margin-left:50px ;background: aliceblue; " id="pro_qx" >
+
         </div>
 
 </form>

@@ -97,7 +97,7 @@ body{
     margin-top: 35px;
     margin-left: 60px;
     float: left;
-    border-radius: 15px;
+    border-radius: 15px;  /*变宽圆角*/
 }
 .pro_title{
     background: azure;
@@ -127,6 +127,44 @@ body{
     left: 36%;
     top: 150px;
     width: 550px;
-    height: 400px;
+    height:500px;
     background: aliceblue;
+    border: solid 1px rgba(58, 147, 153, 0.47);
+    border-radius: 15px;  /*变宽圆角*/
 }
+.alert_title{
+    font:bold 24px/30px "Microsoft YaHei UI";
+    color:#0033cc;
+    text-align:center;
+    margin-bottom:20px;}
+
+.alert_input label{
+    width:100px;
+    height:50px;
+    font: normal 20px/50px "Microsoft YaHei UI";
+    margin-left:30px;
+    color:#03c;
+}
+.alert_input input{
+    height:75%;
+    width:200px;
+    border-radius:5px
+    border:solid 1px #0033cc;
+}
+.pro_desc{
+    font: normal 20px/50px "Microsoft YaHei UI";
+    color:#03c;
+    margin-left:30px;
+}
+.pro_desc textarea{
+    margin:0 9%;
+    width:90%;
+    height:120px;
+    border:solid 1px #0033cc;
+    border-radius:5px
+}
+.pro_tj{
+    text-align:center;
+    font-size:25px;
+
+    }
