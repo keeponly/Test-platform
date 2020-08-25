@@ -148,7 +148,7 @@ body{
 .alert_input input{
     height:75%;
     width:200px;
-    border-radius:5px
+    border-radius:5px;
     border:solid 1px #0033cc;
 }
 .pro_desc{
