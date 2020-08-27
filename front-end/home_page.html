@@ -15,21 +15,22 @@
 /*弹框js*/
     $(function () {
         $("#add").click(function () {
-            $(".add_pro").addClass("show")
+            $(".back").addClass("show")
         });
         $("#pro_qx").click(function () {
-            $(".add_pro").removeClass("show")});
+            $(".back").removeClass("show")});
          $("#pro_tj").click(function () {
-            $(".add_pro").removeClass("show");
+            $(".back").removeClass("show");
         });
-         $(".th").click(function () {
+         $(".left_meun_list h3").click(function () {
              $(this).next().toggleClass('show')
+             .parent().siblings().children('ul').removeClass('show')
          })
     })
     </script>
 </head>
 <body>
-
+顶部菜单栏<!---->
 <div class="top_menu">
     <!--标题-->
     <div class="title" >自动化测试平台</div>
@@ -48,43 +49,45 @@
     </div>
 </div>
 <!--*侧边栏*-->
-<div class="left_menu" >项目管理<!--定义左边菜单总长度，宽度-->
-    <ul style="height:700px">
-        <li class="left_meun_list" style="height: 150px">
-            <h3 class="th" style="height:50px">环境管理</h3>
-            <ul class="caidan hide"  style="height: 50px;">
+<div class="left_menu" ><!--定义左边菜单总长度，宽度-->
+    <div class="left_title">项目管理</div>
+        <div class="left_meun_list">
+            <ul>
+                <li>
+                    <h3 style="margin-top: 20px">环境管理</h3>
+                    <ul class="hide">
                 <li><a href="" >添加接口</a></li>
                 <li><a href="" >添加接口</a></li>
             </ul>
-        </li>
-        <li class="left_meun_list" style="height: 50px">
-            <h3 class="th" style="height: 100px">环境管理</h3>
-             <ul class=" hide"  style="height: 130px;">
-                <li><a href=" " >添加接口</a></li>
-                <li><a href=" " >添加接口</a></li>
-            </ul>
-        </li>
-        <li class="left_meun_list" style="height: 50px">
-            <h3 class="th" style="height: 100px">环境管理</h3>
-            <ul class="hide"  style="height: 130px;">
+                </li>
+                <li>
+                    <h3 style="margin-top: 20px" >环境管理</h3>
+                    <ul class="hide">
                 <li><a href="" >添加接口</a></li>
                 <li><a href="" >添加接口</a></li>
             </ul>
-        </li>
-        <li class="left_meun_list" style="height: 50px">
-            <h3 class="th" style="height: 100px">环境管理</h3>
-            <ul class="hide"  style="height: 130px;">
+                </li>
+                <li>
+                    <h3 style="margin-top: 20px" >环境管理</h3>
+                    <ul class="hide">
                 <li><a href="" >添加接口</a></li>
                 <li><a href="" >添加接口</a></li>
             </ul>
-        </li>
-        <li class="left_meun_list" style="height: 50px">
-            <h3 class="th" style="height:100px">环境管理</h3>
-            <ul class="hide"  style="height: 130px;">
+                </li>
+                <li>
+                    <h3 style="margin-top: 20px" >环境管理</h3>
+                    <ul class="hide">
                 <li><a href="" >添加接口</a></li>
                 <li><a href="" >添加接口</a></li>
             </ul>
-        </li>
+                </li>
+                <li>
+                    <h3 style="margin-top: 20px" >环境管理</h3>
+                    <ul class="hide">
+                <li><a href="" >添加接口</a></li>
+                <li><a href="" >添加接口</a></li>
+            </ul>
+                </li>
 
     </ul>
 </div>
@@ -95,28 +98,28 @@
         <div class="pro_title"> 项 目 A </div>
         <p>用例数量</p>
         <p>接口数量</p>
-        <div style="text-align: center;margin-top: 15px">
+        <div style="text-align: center">
             <a href="">删除项目</a></div>
     </div>
     <div class="pro_info">
         <div class="pro_title"> 项 目 A </div>
         <p>用例数量</p>
         <p>接口数量</p>
-        <div style="text-align: center;margin-top: 15px">
+        <div style="text-align: center">
             <a href="">删除项目</a></div>
     </div>
     <div class="pro_info">
         <div class="pro_title"> 项 目 A </div>
         <p>用例数量</p>
         <p>接口数量</p>
-        <div style="text-align: center;margin-top: 15px">
+        <div style="text-align: center">
             <a href="">删除项目</a></div>
     </div>
     <div class="pro_info">
         <div class="pro_title"> 项 目 A </div>
         <p>用例数量</p>
         <p>接口数量</p>
-        <div style="text-align: center;margin-top: 15px">
+        <div style="text-align: center">
             <a href="">删除项目</a></div>
     </div>
     <div class="pro_info" id="add">
@@ -126,7 +129,8 @@
 
 </div>
 <!--增加项目窗口-->
-<div class="add_pro hide"  >
+<div class="back hide">
+<div class="add_pro "  >
     <div class="alert_title"> 新增项目</div>
     <form action="" >
         <div class="alert_input">
@@ -153,4 +157,5 @@
 
 </form>
 </div>
+    </div>
 </body>
