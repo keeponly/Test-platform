@@ -173,6 +173,7 @@ body{
 .show{
     display:block;
 }
+/*弹出添加项目屏蔽其他按钮*/
 .back{
     position: fixed;
     top: 0;
