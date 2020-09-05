@@ -22,7 +22,7 @@
          $("#pro_tj").click(function () {
             $(".back").removeClass("show");
         });
-         $(".left_meun_list h3").click(function () {
+         $(".left_menu_list h3").click(function () {
              $(this).next().toggleClass('show')
              .parent().siblings().children('ul').removeClass('show')
          })
@@ -30,7 +30,7 @@
     </script>
 </head>
 <body>
-顶部菜单栏<!---->
+<!--顶部菜单栏-->
 <div class="top_menu">
     <!--标题-->
     <div class="title" >自动化测试平台</div>
@@ -51,7 +51,7 @@
 <!--*侧边栏*-->
 <div class="left_menu" ><!--定义左边菜单总长度，宽度-->
     <div class="left_title">项目管理</div>
-        <div class="left_meun_list">
+        <div class="left_menu_list">
             <ul>
                 <li>
                     <h3 style="margin-top: 20px">环境管理</h3>
@@ -90,6 +90,7 @@
                 </li>
 
     </ul>
+</div>
 </div>
 
 <!--内容部分-->
@@ -130,32 +131,31 @@
 </div>
 <!--增加项目窗口-->
 <div class="back hide">
-<div class="add_pro "  >
-    <div class="alert_title"> 新增项目</div>
-    <form action="" >
-        <div class="alert_input">
-            <label for="pro_name">项目名称：</label>
-            <input type="text" name="title" id="pro_name">
-        </div>
-        <div class="alert_input">
-            <label for="pro_address">测试地址：</label>
-            <input type="text" name="title" id="pro_address">
-        </div>
-        <div class="alert_input">
-            <label for="pro_personnel">测试人员：</label>
-            <input type="text" name="title" id="pro_personnel">
-        </div>
-        <div class="pro_desc">
-            <label for="describe">项目描述：</label>
-            <textarea cols="25" rows="5"  id="describe" style="margin-left:18px"></textarea>
-        </div>
-        <div class="pro_tj">
-            <input type="submit" value="提交" style="font-size:25px; background: aliceblue;" id="pro_tj">
-            <input type="button" value="取消" style="font-size:25px;margin-left:50px ;background: aliceblue; " id="pro_qx" >
+    <div class="add_pro "  >
+        <div class="alert_title"> 新增项目</div>
+        <form action="" >
+            <div class="alert_input">
+                <label for="pro_name">项目名称：</label>
+                <input type="text"  id="pro_name">
+            </div>
+            <div class="alert_input">
+                <label for="pro_address">测试地址：</label>
+                <input type="text" id="pro_address">
+            </div>
+            <div class="alert_input">
+                <label for="pro_personnel">测试人员：</label>
+                <input type="text"  id="pro_personnel">
+            </div>
+            <div class="pro_desc">
+                <label for="describe">项目描述：</label>
+                <textarea cols="25" rows="5"  id="describe" style="margin-left:18px"></textarea>
+            </div>
+            <div class="pro_tj">
+                <input type="submit" value="提交" style="font-size:25px; background: aliceblue;" id="pro_tj">
+                <input type="button" value="取消" style="font-size:25px;margin-left:50px ;background: aliceblue; " id="pro_qx" >
 
-        </div>
-
-</form>
-</div>
+            </div>
+        </form>
     </div>
+</div>
 </body>
