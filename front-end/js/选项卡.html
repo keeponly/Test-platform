@@ -29,7 +29,6 @@
         }
         .content div{
             margin-left:30px;
-            background:#9ad2ed;
             width:100%;
             height:500px;
             display:none
@@ -44,6 +43,13 @@
                 $(this).addClass("cur").siblings().removeClass("cur");
                 $(".content div").eq($(this).index()).addClass('active').siblings().removeClass('active')
             });
+            $('.add_data').click(function () {
+                const tr = '<tr>' + $(this).siblings('table').find('tr').eq(-1).html() + '</tr>';
+                $(this).siblings('table').append(tr);
+            });
+            $('.del_data').click(function () {
+                $(this).siblings('table').find('tr').eq(-1).remove()
+            })
         });
     </script>
 </head>
@@ -58,9 +64,71 @@
 
     </div>
     <div class="content">
-        <div class="active">请求头</div>
-        <div>请求参数</div>
-        <div>相应参数</div>
+        <div class="active">
+            <input type="button" class="add_data" value="添加header">
+            <input type="button" class="del_data" value="删除header">
+            <table>
+                <tr>
+                    <th>选择</th>
+                    <th>header</th>
+                    <th>value</th>
+                </tr>
+                <tr>
+                    <td><input type="radio"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+            <input type="button" class="add_data" value="添加header">
+            <input type="button" class="del_data" value="删除header">
+            <table>
+                <tr>
+                    <th>选择</th>
+                    <th>header</th>
+                    <th>value</th>
+                </tr>
+                <tr>
+                    <td><input type="radio"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div >
+            <input type="button" class="add_data" value="添加header">
+            <input type="button" class="del_data" value="删除header">
+            <table>
+                <tr>
+                    <th>选择</th>
+                    <th>header</th>
+                    <th>value</th>
+                </tr>
+                <tr>
+                    <td><input type="radio"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+
+            </table>
 
     </div>
 
