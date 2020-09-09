@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>选项卡</title>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <style type="text/css">
         .box{
             height: 60px;
@@ -43,13 +43,29 @@
                 $(this).addClass("cur").siblings().removeClass("cur");
                 $(".content div").eq($(this).index()).addClass('active').siblings().removeClass('active')
             });
+            /*添加*/
             $('.add_data').click(function () {
                 const tr = '<tr>' + $(this).siblings('table').find('tr').eq(-1).html() + '</tr>';
                 $(this).siblings('table').append(tr);
             });
+            /*删除*/
             $('.del_data').click(function () {
-                $(this).siblings('table').find('tr').eq(-1).remove()
-            })
+            /*删除左后一个*/
+                /*$(this).siblings('table').find('tr').eq(-1).remove()*/
+            /*删除选中的单选框*/
+                /*$(':checked').parent().parent().remove();*/
+            /* 删除选中的留下最后一行*/
+                var check = $(':checked')
+                var table = $(this).siblings('table')
+                if(table.find('tr').length>2){
+                    if (check.length>0){
+                        console.log(check.length)
+                        check.parent().parent().remove()}
+                    else{
+                            table.find('tr').eq(-1).remove()
+                        }
+                }
+            });
         });
     </script>
 </head>
@@ -129,8 +145,7 @@
                 </tr>
 
             </table>
-
-    </div>
+        </div>
 
 </div>
 </body>
