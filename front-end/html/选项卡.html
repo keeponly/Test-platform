@@ -8,8 +8,12 @@
     <style type="text/css">
         .box{
             height: 60px;
-            margin: 10px auto 0 10px;<!--上右下左-->
+            margin: 10px auto 0 10px; /*--上右下左*/
             width:100%;
+        }
+
+        .menu ul{
+            margin-left: 30px;
         }
         .menu li{
             list-style: none;
@@ -24,7 +28,6 @@
             }
         .content{
             width:100%;
-            margin: 0px auto 0 10px;
             float: left;
         }
         .content div{
@@ -55,8 +58,8 @@
             /*删除选中的单选框*/
                 /*$(':checked').parent().parent().remove();*/
             /* 删除选中的留下最后一行*/
-                var check = $(':checked')
-                var table = $(this).siblings('table')
+                const check = $(':checked');
+                const table = $(this).siblings('table');
                 if(table.find('tr').length>2){
                     if (check.length>0){
                         console.log(check.length)
@@ -90,12 +93,12 @@
                     <th>value</th>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
@@ -112,12 +115,12 @@
                     <th>value</th>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
@@ -134,19 +137,19 @@
                     <th>value</th>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
 
             </table>
         </div>
-
+    </div>
 </div>
 </body>
 </html>
