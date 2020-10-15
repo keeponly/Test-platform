@@ -2,25 +2,37 @@
 # @Author   :wang-kai
 # @tel      :15313929271
 # @File     :flask_01
-import flask
-from flask import Flask, request, render_template
-import os
-path = os.getcwd()
-print(path)
-# app = Flask(__name__,
-#             template_folder='D:\Test-platform\front-end\templates')
-#
-# # 添加路由
-# @app.route('/')
-# def index():
-#     a = request
-#     # 将请求参数存为字典
-#     args = request.args
-#     # 获取请求参数
-#     name =args.get('username')
-#     print(name)
-#     return render_template('home_page.html')
-#
-#
-# # 运行服务器
-# app.run()
+
+from flask import Flask, request, render_template, config
+from project_path import html_path, css_path
+app = Flask(__name__,
+            template_folder=html_path,
+            static_folder=css_path)
+
+app.config['DEBUG'] = True
+app.config['PORT'] = 5002
+
+
+def home(f):
+    def deccorator(*args, **kw):
+        return f(*args, **kw)
+    return deccorator
+
+
+# 添加路由
+@app.route('/')
+@home
+# 视图函数
+def index():
+    # 1.接收参数
+    # 2.调用对应函数处理数据
+    # 3.构建响应结果
+    # args = request.args
+    # name = args.get('username')
+    # print(name)
+    return render_template('login.html')
+
+
+# 运行服务器
+if __name__ == '__main__':
+    app.run(port=app.config['PORT'], debug=app.config['DEBUG'])
