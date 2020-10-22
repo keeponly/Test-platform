@@ -15,13 +15,13 @@ app.config['PORT'] = 5002
 
 def home(f):
     def deccorator(*args, **kw):
-        return f(*args, **kw)
+        return f(*args, **kw)  # 必须返回视图函数本身的返回值
     return deccorator
 
 
 # 添加路由
 @app.route('/')
-@home
+@home  # 装饰函数必须放在route里面
 # 视图函数
 def index():
     # 1.接收参数
