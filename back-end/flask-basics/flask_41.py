@@ -5,10 +5,11 @@
 
 from flask import Flask, request, render_template, config
 from project_path import html_path, css_path
+# 初始化app
 app = Flask(__name__,
             template_folder=html_path,
             static_folder=css_path)
-
+# 配置
 app.config['DEBUG'] = True
 app.config['PORT'] = 5002
 

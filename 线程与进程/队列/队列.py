@@ -2,9 +2,11 @@
 # @Author   :wang-kai
 # @tel      :15313929271
 # @File    :队列.py
-import queue
+
 # 创建一个队列  3 代表里面的里面最多3个任务 任务就是队列里面的数据
-q = queue.Queue(10)
+from queue import Queue
+
+q = Queue(10)
 # 队列增加数据
 q.put(2)
 # 获取队列数据
