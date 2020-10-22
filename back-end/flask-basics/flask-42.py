@@ -5,15 +5,15 @@
 # @ File    :flask-42.py 
 
 from flask import Flask, request, render_template, config
-from project_path import html_path, css_path
-app = Flask(__name__,
-            template_folder=html_path,
-            static_folder=css_path)
 
 
-@app.route('/')
+app = Flask(__name__)
+
+
+@app.route('/case')
 def index():
-    return render_template('login.html')
+    id= request.args.get('id')  # 地址问号后面的
+    return f'{id}' # f相当于format
 
 
 if __name__ == '__main__':
