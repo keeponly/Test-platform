@@ -13,10 +13,10 @@ app = Flask(__name__,
 app.config['DEBUG'] = True
 app.config['PORT'] = 5002
 
-
+# 必须返回视图函数本身的返回值，return返回的直接是以得相应，等于函数index的return，返回hello.则代表index return hello
 def home(f):
     def deccorator(*args, **kw):
-        return f(*args, **kw)  # 必须返回视图函数本身的返回值
+        return f(*args, **kw)
     return deccorator
 
 
@@ -31,7 +31,7 @@ def index():
     # args = request.args
     # name = args.get('username')
     # print(name)
-    return render_template('login.html')
+    return render_template('home_page.html')
 
 
 # 运行服务器
