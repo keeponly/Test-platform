@@ -10,7 +10,7 @@ from flask import Flask, request, render_template, config
 app = Flask(__name__)
 
 
-@app.route('/case', methods=['POST'])
+@app.route('/case/<id>', methods=['POST'])
 def index():
     # 地址问号后面的,<int:id> http://127.0.0.1:5000/case?id=77
     id = request.args.get('id')
