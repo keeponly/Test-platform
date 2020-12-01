@@ -1,7 +1,7 @@
 # @Time     :2020/10/29  21:12
 # @Author   :wang-kai
 # @tel      :15313929271
-# @File    :flask-43.py
+# @File    :flask-43-1.py
 """
 路由 url 试图函数的绑定关系
 map

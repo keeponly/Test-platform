@@ -4,17 +4,17 @@
 # @tel      :153139292711
 # @ File    :flask-44.py 
 
-from flask import Flask
+from flask import Flask, request
 from flask.views import View
 app = Flask(__name__)
 
 class MyView(View):
-    methods = ['GET']
+    methods = ['GET','POST']
 
-    def dispatch_request(self, name):
-        return 'Hello %s!' % name
+    def dispatch_request(self):
+        return 'Hello {}!'.format(request.methods)
 
 
-app.add_url_rule('/hello/<name>', view_func=MyView.as_view('myview'))
+app.add_url_rule('/hello/<name>', view_func=MyView.as_view('user'))
 if __name__ == '__main__':
     app.run()
