@@ -25,3 +25,9 @@ def index():
 if __name__ == '__main__':
 
     app.run(debug=True)
+
+"""
+@app.route('/case/<name>', methods=['GET'])
+def index(name):
+    http://127.0.0.1:5000/case/77
+    return name   # f相当于format"""

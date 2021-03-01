@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <form action="/upload" method="post">
+        <input type="file" name="pic">
+        <input type="submit">
+    </form>
+
+    <p onclick="send_ajax()">点击发送</p>
+    <script>
+        function send_ajax() {
+            //发送ajax请求
+            $.ajax({
+                url:'http://127.0.0.1:5000',
+                data:JSON.stringify({username:'apple'}),
+                dataType:'json',
+                type:'POST',
+                contentType:'application/json',
+                success:function (data) {
+                    alert('成功')
+
+                }
+            })
+
+        }
+    </script>
+
+</body>
+</html>
